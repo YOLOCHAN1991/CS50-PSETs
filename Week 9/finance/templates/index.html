@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Shares owned</th>
+                <th>Company Name</th>
+                <th>Symbol</th>
+                <th>Paid(total)</th>
+                <th>Actual share value(unit)</th>
+                <th>Actual share value (total shares)</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row["shares"]}}</td>
+                <td>{{row["company_name"]}}</td>
+                <td>{{row['symbol']}}</td>
+                <td>{{row["total_value"] | usd}}</td>
+                <td>{{row['price']}}</td>
+                <td>{{row['total_price'] | usd}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

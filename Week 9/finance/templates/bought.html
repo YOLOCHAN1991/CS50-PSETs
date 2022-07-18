@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Shares bought</th>
+                    <th>Price(unit)</th>
+                    <th>Price(total)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{quote["name"]}}</td>
+                    <td>{{quote["symbol"]}}</td>
+                    <td>{{shares}}</td>
+                    <td>{{quote["price"] | usd}}</td>
+                    <td>{{(quote["price"] * shares) | usd}}</td>
+
+                </tr>
+            </tbody>
+
+
+        </table>
+        <a href='/buy'><button class="btn btn-primary">Buy more!</button></a>
+
+
+    </div>
+{% endblock %}

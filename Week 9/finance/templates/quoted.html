@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{quote["name"]}}</td>
+                    <td>{{quote["price"] | usd}}</td>
+                    <td>{{quote["symbol"]}}</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+        <a href="/buy"><button class="btn btn-primary">Wanna buy?</button></a>
+
+
+
+    </div>
+
+{% endblock %}

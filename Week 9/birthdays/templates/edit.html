@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Change birthday</h2>
+                <form action="/editconfirm" method="post">
+                    <input name="id" type="hidden" value="{{entry['id']}}">
+                    <input name="name" type="text" placeholder="Name" value="{{entry['name']}}">
+                    <input name="month" type="number" placeholder="Month" value="{{entry['month']}}">
+                    <input name="day" type="number" placeholder="Day" value="{{entry['day']}}">
+                    <input type="submit" value="register">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
