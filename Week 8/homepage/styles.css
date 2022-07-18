@@ -1,0 +1,116 @@
+header, footer{
+    background-color: #F2E4FA;
+}
+
+footer{
+    padding-left: 2rem;
+}
+
+p{
+    padding: 0rem 1rem;
+}
+
+#buttons{
+    padding: 0rem 0.75rem;
+}
+
+#links:hover{
+    font-size:110%;
+    color: #e3d3e3;
+
+}
+
+#links{
+    color: white;
+    text-decoration: none;
+    color:black;
+}
+
+div{
+    padding: 2rem 0rem;
+}
+
+#leftfooter{
+    position: relative;
+    min-width: 1rem;
+    max-width: 20rem;
+}
+
+#indent{
+    text-indent: 50px;
+    padding: 0rem 0rem;
+}
+
+#rightfooter{
+    position: relative;
+    left: 3rem;
+    min-width: 1rem;
+    font-weight: 500;
+}
+
+#foot, #foot .col{
+    padding: .5rem 0rem;
+    margin: 0rem;
+}
+
+#main{
+    padding: 0rem 3rem;
+    min-width: 35vh;
+    max-width: 100vh;
+}
+
+.bd-title{
+    padding-left: 1rem;
+}
+
+#main p {
+    text-align: left;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+
+}
+
+#main div{
+    background: #E5DCEA;
+    margin-bottom: 1rem;
+}
+
+.container-fluid{
+    background-color: #F9F4FC;
+}
+
+#Bigtittle{
+    padding: 2rem 0rem;
+}
+
+h3{
+    font-weight: 700;
+}
+
+
+#rightpanel{
+    position: sticky;
+    max-width: 25rem;
+    min-width: 12rem;
+    padding: 2rem 2rem;
+    height: calc(70vh - 7rem);
+    overflow-y: auto;
+    top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #E5DCEA;
+}
+#rightpanel p, #rightpanel table{
+    width: 20rem;
+}
+
+#rightpanel {
+    display: block;
+  }
+  @media (max-width: 998.98px) {
+    #rightpanel {
+        display: none;
+    }
+}

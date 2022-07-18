@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script src="check.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which game is the best game ever existed?</h3>
+                <!-- TODO: Add multiple choice question here -->
+                <div>
+                    <button id="a" onclick="MCcheck(event)">Dark Souls 3</button>
+                    <button id="c" onclick="MCcheck(event)">Rainbow Six Siege</button>
+                    <button id="d" onclick="MCcheck(event)">Minecraft</button>
+                    <button id="b" onclick="MCcheck(event)">Warzone</button>
+                </div>
+             </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Name the biggest mountain on planet Earth</h3>
+                <form onsubmit="FRcheck(event); return false">
+                    <input autocomplete="off" placeholder="Write your answer here." id="answer001" type="text">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <script src="myjs.js" type="text/avascript"></script>
+        <title>My Webpage(Design)</title>
+    </head>
+
+    <body>
+        <header class="navbar navbar-expand-md navbar-dark bd-navbar" id="top">
+            <nav class="container-xxl flex-wrap flex-md-nowrap">
+                <img class="logo" src="images/0.jpeg" role="jpeg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="black" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="bdNavbar">
+                    <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                        <li id="buttons" class="nav-item col-6 col-md-auto" ><a id="links" class="nav-link p-2 active" aria-current="true" href="index.html">PYTHON</a></li>
+                        <li id="buttons" class="nav-item col-6 col-md-auto" ><a id="links" class="nav-link p-2 active" aria-current="true" href="history.html">HISTORY</a></li>
+                        <li id="buttons" class="nav-item col-6 col-md-auto" ><a id="links" class="nav-link p-2 active" aria-current="true" href="design.html">DESIGN PHiLOSOPHY AND FEATURES</a></li>
+                        <li id="buttons" class="nav-item col-6 col-md-auto" ><a id="links" class="nav-link p-2 active" aria-current="true" href="syntax.html">SYNTAX AND SEMANTICS</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row gx-4">
+                <div class="col-sm" id="main">
+                    <div id="Bigtittle">
+                        <h1 class="bd-title" id="title">History of Python</h1>
+                        <p>The programming language Python was conceived in the late 1980s,[1] and its implementation was started in December 1989[2] by Guido van Rossum at CWI in the Netherlands as a successor to ABC capable of exception handling and interfacing with the Amoeba operating system.[3] Van Rossum is Python's principal author, and his continuing central role in deciding the direction of Python is reflected in the title given to him by the Python community, Benevolent Dictator for Life (BDFL).[4][5] (However, van Rossum stepped down as leader on July 12, 2018.[6]). Python was named after the BBC TV show Monty Python's Flying Circus.</p>
+                        <p>Python 2.0 was released on October 16, 2000, with many major new features, including a cycle-detecting garbage collector (in addition to reference counting) for memory management and support for Unicode. However, the most important change was to the development process itself, with a shift to a more transparent and community-backed process.</p>
+                        <p>Python 3.0, a major, backwards-incompatible release, was released on December 3, 2008[9] after a long period of testing. Many of its major features have also been backported to the backwards-compatible, though now-unsupported, Python 2.6 and 2.7.</p>
+                    </div>
+                    <div>
+                        <h2 class="bd-title" id="subtitle">Early history</h2>
+                        <p>In February 1991, Van Rossum published the code (labeled version 0.9.0) to alt.sources.[11][12] Already present at this stage in development were classes with inheritance, exception handling, functions, and the core datatypes of list, dict, str and so on. Also in this initial release was a module system borrowed from Modula-3; Van Rossum describes the module as "one of Python's major programming units".[1] Python's exception model also resembles Modula-3's, with the addition of an else clause.[3] In 1994 comp.lang.python, the primary discussion forum for Python, was formed, marking a milestone in the growth of Python's userbase.</p>
+                    </div>
+                    <div>
+                        <h2 class="bd-title" id="subtitle">Version 1</h2>
+                        <p>Python reached version 1.0 in January 1994. The major new features included in this release were the functional programming tools lambda, map, filter and reduce. Van Rossum stated that "Python acquired lambda, reduce(), filter() and map(), courtesy of a Lisp hacker who missed them and submitted working patches".</p>
+                        <p>The last version released while Van Rossum was at CWI was Python 1.2. In 1995, Van Rossum continued his work on Python at the Corporation for National Research Initiatives (CNRI) in Reston, Virginia from where he released several versions.</p>
+                        <p>By version 1.4, Python had acquired several new features. Notable among these are the Modula-3 inspired keyword arguments (which are also similar to Common Lisp's keyword arguments) and built-in support for complex numbers. Also included is a basic form of data hiding by name mangling, though this is easily bypassed.</p>
+                        <p>During Van Rossum's stay at CNRI, he launched the Computer Programming for Everybody (CP4E) initiative, intending to make programming more accessible to more people, with a basic "literacy" in programming languages, similar to the basic English literacy and mathematics skills required by most employers. Python served a central role in this: because of its focus on clean syntax, it was already suitable, and CP4E's goals bore similarities to its predecessor, ABC. The project was funded by DARPA.[15] As of 2007, the CP4E project is inactive, and while Python attempts to be easily learnable and not too arcane in its syntax and semantics, outreach to non-programmers is not an active concern.</p>
+                        <h3 class="bd-title" id="sub-subtitle">BeOpen</h3>
+                        <p>In 2000, the Python core development team moved to BeOpen.com[17] to form the BeOpen PythonLabs team, under the direction of early Google alum Domenic Merenda.[18][19] CNRI requested that a version 1.6 be released, summarizing Python's development up to the point at which the development team left CNRI. Consequently, the release schedules for 1.6 and 2.0 had a significant amount of overlap.[8] Python 2.0 was the only release from BeOpen.com. After Python 2.0 was released by BeOpen.com, Guido van Rossum and the other PythonLabs developers joined Digital Creations.</p>
+                        <p>The Python 1.6 release included a new CNRI license that was substantially longer than the CWI license that had been used for earlier releases. The new license included a clause stating that the license was governed by the laws of the State of Virginia. The Free Software Foundation argued that the choice-of-law clause was incompatible with the GNU General Public License. BeOpen, CNRI and the FSF negotiated a change to Python's free software license that would make it GPL-compatible. Python 1.6.1 is essentially the same as Python 1.6, with a few minor bug fixes, and with the new GPL-compatible license.</p>
+                    </div>
+                </div>
+
+                <div class="col-md" id="rightpanel">
+                    <div>
+                        <table class="table table-hover table-striped">
+                            <tr>
+                                <th>Table of contents</th>
+                            </tr>
+                            <tr>
+                                <td>History of Python</td>
+                            </tr>
+                            <tr>
+                                <td>Early history</td>
+                            </tr>
+                            <tr>
+                                <td>Version 1</td>
+                            </tr>
+                            <tr >
+                                <td class="indent">BeOpen</td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="bd-footer py-1 ">
+            <div id="foot" class="row">
+                <div class="col" id="leftfooter">
+                    <p> Information acquired from <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia.org</a></p>
+                    <p>This page was made only for educational purposes</p>
+                </div>
+                <div class="col" id="rightfooter">
+                    <ul class="navbar-nav flex-wrap bd-navbar-nav pt-1 py-md-0">
+                        <li id="buttons"><a id="links" aria-current="true" href="index.html">PYTHON</a></li>
+                        <li id="buttons"><a id="links" aria-current="true" href="history.html">HISTORY</a></li>
+                        <li id="buttons"><a id="links" aria-current="true" href="design.html">DESIGN PHiLOSOPHY AND FEATURES</a></li>
+                        <li id="buttons"><a id="links" aria-current="true" href="syntax.html">SYNTAX AND SEMANTICS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </footer>
+    </body>
+
+</html>
