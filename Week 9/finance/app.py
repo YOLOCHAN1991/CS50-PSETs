@@ -6,7 +6,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup, usd, user_shares_update
+from helpers import apology, login_required, lookup, usd
 
 # Configure application
 app = Flask(__name__)
@@ -262,4 +262,47 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+
+
+        # Getting the number of shares the user wnats to sell
+        try:
+            soldshares = int(request.form.get('soldshares'))
+        except ValueError:
+            return apology('Not a number', 403)
+        # Looking up the quote of the symbol
+        quote = lookup(request.form.get('symbol'))
+
+        # Ensuring the quote exists
+        if not quote or not soldshares:
+            return apology('Something went wrong', 403)
+        # Ensuring there not negativer numbers
+        if soldshares < 1:
+            return apology('Invalid number', 403)
+        rows = db.execute('SELECT * FROM users_shares where user_id = ? AND symbol = ?', session['user_id'], quote['symbol'])
+
+        if len(rows) != 1:
+            return apology('Something went wrong,,',403)
+
+        if soldshares > rows[0]['shares']:
+            return apology('You cannot sell that many shares...')
+
+        money_earned = soldshares * quote['price']
+
+
+
+        db.execute('UPDATE users_shares SET shares = ?, sold_shares = ?, money_earned = ? WHERE user_id = ? AND symbol = ?',(rows[0]['shares'] - soldshares), (soldshares + rows[0]['sold_shares']), (money_earned + rows[0]['money_earned']), session['user_id'], quote['symbol'])
+
+        rows = db.execute('SELECT * from users where id = ?', session['user_id'])
+        if len(rows) != 1:
+            return apology('Something went wrong not sure what...', 403)
+
+        db.execute('UPDATE users SET cash = ? WHERE id = ?', (rows[0]['cash'] + money_earned) ,session['user_id'])
+
+        return redirect('/')
+
+
+
+
+    else:
+        return render_template('sell.html')

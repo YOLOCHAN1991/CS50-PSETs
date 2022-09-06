@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/POPOCHAN1990/Documents/GitHub/CS50-PSETs'
+make: Leaving directory 'c:/Users/POPOCHAN1990/Documents/GitHub/CS50-PSETs'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
