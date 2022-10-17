@@ -295,7 +295,7 @@ def sell():
 
         rows = db.execute('SELECT * from users where id = ?', session['user_id'])
         if len(rows) != 1:
-            return apology('Something went wrong not sure what...', 403)
+            return apology('Somethin+g went wrong not sure what...', 403)
 
         db.execute('UPDATE users SET cash = ? WHERE id = ?', (rows[0]['cash'] + money_earned) ,session['user_id'])
 
